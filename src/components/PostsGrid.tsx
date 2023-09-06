@@ -1,4 +1,7 @@
+// API
 import { Post } from "@/API/posts";
+
+// Components
 import PostCard from "./PostCard";
 
 interface Props {
