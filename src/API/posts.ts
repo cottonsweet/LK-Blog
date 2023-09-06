@@ -16,6 +16,12 @@ export async function getFeaturedPosts(): Promise<Post[]> {
     .then((posts) => posts.filter((post) => post.featured));
 }
 
+export async function getNonFeaturedPosts(): Promise<Post[]> {
+  // featured가 false인 경우에만 데이터 가져오기
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => !post.featured));
+}
+
 export async function getAllPosts(): Promise<Post[]> {
   const filePath = path.join(process.cwd(), "data", "posts.json");
   return readFile(filePath, "utf-8")
