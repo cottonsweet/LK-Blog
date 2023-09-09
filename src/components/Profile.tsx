@@ -6,7 +6,7 @@ export default function Profile() {
   return (
     <section className="flex flex-col items-center">
       <Image
-        src="https://avatars.githubusercontent.com/u/64725837"
+        src="/images/profile.png"
         width={250}
         height={250}
         alt="profile"
