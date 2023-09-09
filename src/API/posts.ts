@@ -10,6 +10,10 @@ export interface Post {
   featured: boolean;
 }
 
+export interface PostData extends Post {
+  content: string;
+}
+
 export async function getFeaturedPosts(): Promise<Post[]> {
   // featured가 true인 경우에만 데이터 가져오기
   return getAllPosts() //
@@ -20,6 +24,16 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
   // featured가 false인 경우에만 데이터 가져오기
   return getAllPosts() //
     .then((posts) => posts.filter((post) => !post.featured));
+}
+
+export async function getPostData(fileName: string): Promise<PostData> {
+  const filePath = path.join(process.cwd(), "data/posts", `${fileName}.md`);
+  const metadata = await getAllPosts() //
+    .then((posts) => posts.find((post) => post.path === fileName));
+  if (!metadata)
+    throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없습니다.`);
+  const content = await readFile(filePath, "utf-8");
+  return { ...metadata, content };
 }
 
 export async function getAllPosts(): Promise<Post[]> {
