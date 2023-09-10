@@ -2,7 +2,7 @@
 import { Metadata } from "next";
 
 // service
-import { getPostData } from "@/service/posts";
+import { getFeaturedPosts, getPostData } from "@/service/posts";
 
 // Components
 import Image from "next/image";
@@ -45,4 +45,12 @@ export default async function PostPage({ params: { slug } }: Props) {
       </section>
     </article>
   );
+}
+
+// 페이지 미리 만들어두기
+export async function generateStaticParams() {
+  const posts = await getFeaturedPosts();
+  return posts.map((post) => ({
+    slug: post.path,
+  }));
 }

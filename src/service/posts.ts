@@ -1,5 +1,6 @@
 import { readFile } from "fs/promises";
 import path from "path";
+import { cache } from "react";
 
 export interface Post {
   title: string;
@@ -45,10 +46,11 @@ export async function getPostData(fileName: string): Promise<PostData> {
   return { ...post, content, next, prev };
 }
 
-export async function getAllPosts(): Promise<Post[]> {
+// 캐시처리
+export const getAllPosts = cache(async () => {
   const filePath = path.join(process.cwd(), "data", "posts.json");
 
   return readFile(filePath, "utf-8")
     .then<Post[]>(JSON.parse)
     .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)));
-}
+});
