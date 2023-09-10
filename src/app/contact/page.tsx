@@ -1,3 +1,12 @@
+// components
+import MyContact from "@/components/MyContact";
+import ContactForm from "@/components/ContactForm";
+
 export default function ContactPage() {
-  return <div>연락하기</div>;
+  return (
+    <section>
+      <MyContact />
+      <ContactForm />
+    </section>
+  );
 }
