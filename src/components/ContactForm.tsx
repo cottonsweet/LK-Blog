@@ -3,8 +3,8 @@
 // React
 import { useState } from "react";
 
-// util
-import { contactFormSchema } from "../util/contactFormValidate";
+// API
+import { sendContactEmail } from "@/API/contact";
 
 // components
 import Banner, { BannerData } from "./Banner";
@@ -15,15 +15,17 @@ interface FormType {
   message: string;
 }
 
-export default function ContactForm() {
-  const [form, setForm] = useState<FormType>({
-    email: "",
-    subject: "",
-    message: "",
-  });
+const DEFAULT_DATA = {
+  email: "",
+  subject: "",
+  message: "",
+};
 
+export default function ContactForm() {
+  const [form, setForm] = useState<FormType>(DEFAULT_DATA);
   const [banner, setBanner] = useState<BannerData | null>(null);
 
+  // Input Data Update
   const changeFormData = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -34,16 +36,23 @@ export default function ContactForm() {
     }));
   };
 
+  // Submit Form Data
   const submitFormData = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log(form);
-
-    setBanner({ message: "발송 되었습니다 !", state: "error" });
-
-    // setTimeout(() => {
-    //   setBanner(null);
-    // }, 5000);
+    sendContactEmail(form)
+      .then(() => {
+        setBanner({ message: "발송 되었습니다 !", state: "success" });
+        setForm(DEFAULT_DATA);
+      })
+      .catch(() => {
+        setBanner({ message: "메일전송에 실패 했습니다 ㅜㅜ", state: "error" });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setBanner(null);
+        }, 5000);
+      });
   };
 
   return (
