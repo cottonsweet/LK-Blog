@@ -11,7 +11,7 @@ export default function MyContact() {
         <FaGithub className="text-zinc-600 mt-3 text-5xl hover:text-yellow-700 duration-200" />
       </a>
 
-      <h2 className="font-bold text-4xl my-14">Please send us your email !</h2>
+      <h2 className="font-bold text-4xl my-10">Please send us your email !</h2>
     </div>
   );
 }
