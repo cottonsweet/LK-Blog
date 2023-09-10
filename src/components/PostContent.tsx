@@ -1,5 +1,5 @@
 // API
-import { Post, PostData } from "@/API/posts";
+import { PostData } from "@/API/posts";
 
 // lib
 import { AiTwotoneCalendar } from "react-icons/ai";
