@@ -1,3 +1,6 @@
+// Next
+import { Metadata } from "next";
+
 // service
 import { getPostData } from "@/service/posts";
 
@@ -9,6 +12,16 @@ import AdjacentPostCard from "@/components/AdjacentPostCard";
 interface Props {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title, description } = await getPostData(slug);
+  return {
+    title,
+    description,
   };
 }
 
