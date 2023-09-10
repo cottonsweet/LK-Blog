@@ -1,3 +1,14 @@
+// Components
+import Profile from "@/components/Profile";
+import Introduce from "@/components/Introduce";
+
 export default function AboutPage() {
-  return <div>어바웃</div>;
+  return (
+    <>
+      <Profile />
+      <div className="px-5">
+        <Introduce />
+      </div>
+    </>
+  );
 }
