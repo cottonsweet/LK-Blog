@@ -1,5 +1,5 @@
-// API
-import { getFeaturedPosts } from "@/API/posts";
+// service
+import { getFeaturedPosts } from "@/service/posts";
 
 // Components
 import PostsGrid from "./PostsGrid";

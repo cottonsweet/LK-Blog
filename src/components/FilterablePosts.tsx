@@ -1,7 +1,12 @@
 "use client";
-// API
-import { Post } from "@/API/posts";
+
+// React
 import { useState } from "react";
+
+// service
+import { Post } from "@/service/posts";
+
+// Components
 import PostsGrid from "./PostsGrid";
 import Categories from "./Categories";
 

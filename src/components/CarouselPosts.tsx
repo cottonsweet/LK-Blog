@@ -1,5 +1,5 @@
-// API
-import { getNonFeaturedPosts } from "@/API/posts";
+// service
+import { getNonFeaturedPosts } from "@/service/posts";
 
 // Components
 import PostCard from "./PostCard";

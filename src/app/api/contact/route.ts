@@ -1,5 +1,5 @@
-// API
-import { sendEmail } from "@/API/email";
+// service
+import { sendEmail } from "@/service/email";
 
 // lib
 import * as yup from "yup";

@@ -3,8 +3,8 @@
 // React
 import { useState } from "react";
 
-// API
-import { sendContactEmail } from "@/API/contact";
+// service
+import { sendContactEmail } from "@/service/contact";
 
 // components
 import Banner, { BannerData } from "./Banner";

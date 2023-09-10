@@ -1,5 +1,5 @@
-// API
-import { getAllPosts } from "@/API/posts";
+// service
+import { getAllPosts } from "@/service/posts";
 
 // Components
 import FilterablePosts from "@/components/FilterablePosts";

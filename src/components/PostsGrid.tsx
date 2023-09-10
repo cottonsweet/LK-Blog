@@ -1,5 +1,5 @@
-// API
-import { Post } from "@/API/posts";
+// service
+import { Post } from "@/service/posts";
 
 // Components
 import PostCard from "./PostCard";

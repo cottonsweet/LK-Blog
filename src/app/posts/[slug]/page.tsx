@@ -1,5 +1,5 @@
-// API
-import { getPostData } from "@/API/posts";
+// service
+import { getPostData } from "@/service/posts";
 
 // Components
 import Image from "next/image";

@@ -1,6 +1,9 @@
-import { Post } from "@/API/posts";
+// Next
 import Image from "next/image";
 import Link from "next/link";
+
+// service
+import { Post } from "@/service/posts";
 
 interface Props {
   post: Post;

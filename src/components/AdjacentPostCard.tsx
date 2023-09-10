@@ -1,5 +1,5 @@
-// API
-import { Post } from "@/API/posts";
+// service
+import { Post } from "@/service/posts";
 
 // Next
 import Link from "next/link";
