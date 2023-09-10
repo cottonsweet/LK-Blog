@@ -6,6 +6,9 @@ import { useState } from "react";
 // util
 import { contactFormSchema } from "../util/contactFormValidate";
 
+// components
+import Banner, { BannerData } from "./Banner";
+
 interface FormType {
   email: string;
   subject: string;
@@ -19,6 +22,8 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [banner, setBanner] = useState<BannerData | null>(null);
+
   const changeFormData = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -31,14 +36,22 @@ export default function ContactForm() {
 
   const submitFormData = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     console.log(form);
+
+    setBanner({ message: "발송 되었습니다 !", state: "error" });
+
+    // setTimeout(() => {
+    //   setBanner(null);
+    // }, 5000);
   };
 
   return (
-    <div className="w-2/4 mx-auto h-auto bg-gray-400 rounded-lg">
+    <div className="w-full max-w-md mx-auto">
+      {banner && <Banner banner={banner} />}
       <form
         onSubmit={submitFormData}
-        className="flex flex-col justify-between items-center p-4"
+        className="flex flex-col justify-between items-center p-4 bg-gray-400 rounded-lg"
       >
         <label
           htmlFor="email"
