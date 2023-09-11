@@ -23,9 +23,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const setThemeMode = `
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+`;
   return (
-    <html lang="en" className={sans.className}>
-      <body className="w-full flex flex-col max-w-screen-2xl mx-auto">
+    <html lang="en" className={`${sans.className} dark`}>
+      <body className="w-full flex flex-col max-w-screen-2xl mx-auto dark:bg-black dark:text-white">
+        <script dangerouslySetInnerHTML={{ __html: setThemeMode }} />
         <Header />
         <main className="grow">{children}</main>
         <Footer />

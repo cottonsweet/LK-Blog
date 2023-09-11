@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DarkMode from "./DarkMode";
 
 export default function Header() {
   return (
@@ -11,6 +12,7 @@ export default function Header() {
         <Link href="/about">About</Link>
         <Link href="/posts">Posts</Link>
         <Link href="/contact">Contact</Link>
+        <DarkMode />
       </nav>
     </header>
   );
