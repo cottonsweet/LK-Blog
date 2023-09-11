@@ -7,7 +7,7 @@ export default function Header() {
       <div>
         <h1 className="font-bold text-xl">LK's Blog</h1>
       </div>
-      <nav className="flex gap-3 text-sm">
+      <nav className="flex gap-3 text-sm items-center">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/posts">Posts</Link>
