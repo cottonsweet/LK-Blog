@@ -32,7 +32,7 @@ export default function RootLayout({
 `;
   return (
     <html lang="en" className={`${sans.className} dark`}>
-      <body className="w-full flex flex-col max-w-screen-2xl mx-auto dark:bg-black dark:text-white">
+      <body className="w-full flex flex-col max-w-screen-2xl mx-auto dark:bg-gray-700 dark:text-white">
         <script dangerouslySetInnerHTML={{ __html: setThemeMode }} />
         <Header />
         <main className="grow">{children}</main>
