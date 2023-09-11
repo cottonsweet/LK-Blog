@@ -28,7 +28,7 @@ export default function PostCard({
           </time>
           <h3 className="text-lg font-bold">{title}</h3>
           <p className="w-full truncate text-center">{description}</p>
-          <span className="text-sm rounded-lg bg-green-100 px-2 my-2">
+          <span className="text-sm rounded-lg bg-green-100 px-4 my-2 dark:bg-amber-600">
             {category}
           </span>
         </div>
