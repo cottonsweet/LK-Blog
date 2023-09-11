@@ -3,7 +3,7 @@ const TITLE_CLASS = "font-bold text-3xl mb-2";
 
 export default function Introduce() {
   return (
-    <section className="w-full flex flex-col justify-center items-center rounded-lg shadow-xl bg-gray-100 mt-8 p-8">
+    <section className="w-full flex flex-col justify-center items-center rounded-lg shadow-xl bg-gray-100 mt-8 pt-8 dark:bg-zinc-700">
       <div className={ITEM_CLASS}>
         <h2 className={TITLE_CLASS}>Who Am I?</h2>
         <p>프론트엔드 엔지니어</p>
