@@ -114,7 +114,7 @@ export default function ContactForm() {
           className="w-full p-2 rounded-md mb-3 resize-none focus:outline-none focus:ring-2 ring-indigo-300 ring-inset"
         />
 
-        <button className="w-full rounded-md p-4 bg-blue-300 text-blue-50 font-bold text-lg hover:text-xl">
+        <button className="w-full rounded-md p-4 bg-blue-300 text-blue-50 font-bold text-lg hover:text-xl hover:text-white">
           Submit
         </button>
       </form>

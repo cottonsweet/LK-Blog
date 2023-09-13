@@ -8,7 +8,7 @@ export default function MyContact() {
       <p>whitecandy777@naver.com</p>
 
       <a href="https://github.com/sstipdev" target="_blank" rel="noreferrer">
-        <FaGithub className="text-zinc-600 mt-3 text-5xl hover:text-yellow-700 duration-200" />
+        <FaGithub className="dark:text-slate-500 dark:hover:text-gray-400 text-zinc-600 mt-3 text-5xl hover:text-yellow-700 duration-200" />
       </a>
 
       <h2 className="font-bold text-4xl my-10">Please send us your email !</h2>
