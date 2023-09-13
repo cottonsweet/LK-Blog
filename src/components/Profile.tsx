@@ -17,7 +17,7 @@ export default function Profile() {
         <h1 className="text-3xl font-bold">Hello, I'm LK</h1>
         <p className="text-lg font-medium">Front-end Engineer</p>
         <Link href="/contact">
-          <button className="font-semibold font-semibold text-xl p-3 bg-orange-300 rounded-xl mt-3 text-[#654321]">
+          <button className="font-semibold text-xl py-2 px-4 bg-orange-300 rounded-xl mt-3 text-[#654321]">
             Contact Me
           </button>
         </Link>
