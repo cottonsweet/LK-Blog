@@ -37,8 +37,8 @@ export default async function PostPage({ params: { slug } }: Props) {
           className="w-full h-1/5 max-h-[500px]"
           src={`/images/posts/${path}.png`}
           alt={title}
-          width={760}
-          height={420}
+          width={320}
+          height={170}
         />
         <PostContent post={post} />
         <section className="flex shadow-md">
