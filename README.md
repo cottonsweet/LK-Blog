@@ -1,38 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Front End Developer LK's log
 
-## Getting Started
+## 배포링크
 
-First, run the development server:
+- Vercel - [https://lk-blog-azure.vercel.app/]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+---
+
+### 🔥 필수 기능(MVP)
+
+- 메인페이지(root), about, posts, contact 페이지 구성
+- 메인페이지 feature, 하단 캐러셀 렌더링
+- posts페이지의 category 클릭 시 해당 카테고리 포함한 포스팅 리스트 불러오기
+- 마크다운, 마크다운 하이라이트 뷰 처리
+- contact → email 보내기 구현
+- 메일발송 유효성 검증
+- Vercel 배포
+
+---
+
+### 📅TODO
+
+- [x] 다크모드
+- [x] 포스팅 상세 페이지에서 이전 글, 다음 글 이동
+- [x] Utterance 댓글 기능 추가
+- [x] metadat SEO 최적화
+
+---
+
+### ⭐️ Skills / lib
+
+- NextJS v13
+- TypeScript
+- Tailwind CSS
+- Yarn
+- Nodemailer
+- React-Markdwon
+- React-Multi-Carousel
+- React-Sysntax-Highlighter
+- Remark-gfm
+- Yup
+- Utterance
+
+---
+
+## 실행 방법
+
 ```
+git clone https://github.com/sstipdev/LK-Blog
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yarn -i
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+yarn run dev
+```
