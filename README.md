@@ -23,7 +23,7 @@
 - [x] 다크모드
 - [x] 포스팅 상세 페이지에서 이전 글, 다음 글 이동
 - [x] Utterance 댓글 기능 추가
-- [x] metadat SEO 최적화
+- [x] metadata SEO 최적화
 
 ---
 
